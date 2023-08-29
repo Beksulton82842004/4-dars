@@ -1,0 +1,51 @@
+
+
+.text{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+hr{
+    position: absolute;
+    top: 55px;
+    width: 95%;
+left: 2.5%;
+}
+.search-input{
+    position: absolute;
+    top: 90px;
+    left: 100px;
+width: 480px;
+height: 56px;
+padding-left: 40px;
+border-radius: 5px;
+
+}
+.img{
+    position: absolute;
+    top: 112px;
+    left: 115px;
+}
+select{
+    position: absolute;
+    top: 90px;
+    right: 100px;
+    width: 200px;
+    height: 56px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.container{
+margin-top: 200px;
+} 
+.card-img-top{
+    height: 300px;
+}
+li{
+    font-weight: 500;
+}
+.btn{
+    position: absolute;
+    top: 100px;
+    left: 500px;
+}
