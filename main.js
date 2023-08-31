@@ -4,7 +4,9 @@
 const elCards = document.querySelector(".cards")
 const elSearchInput = document.querySelector(".search-input")
 const elBtn = document.querySelector("#btn")
-
+const elSelect = document.querySelector("#continents")
+const elAll = document.querySelector(".all")
+let countries ;
 
 fetch("https://restcountries.com/v3.1/all")
     .then((res) => res.json())
@@ -13,9 +15,6 @@ fetch("https://restcountries.com/v3.1/all")
     renderposts(res, elCards);
     countries = res;
   });
-
-
-
   function renderposts(array, parent) {
     parent.innerHTML = "";
   
@@ -47,7 +46,6 @@ fetch("https://restcountries.com/v3.1/all")
     }
   }
 
-
   elBtn.addEventListener("click", (evt) => {
     evt.preventDefault();
     const newArr = [];
@@ -62,10 +60,23 @@ fetch("https://restcountries.com/v3.1/all")
     
     renderposts(newArr, elCards);
   });
+console.log();
 
   
-    
-   
+
+elSelect.addEventListener("change", (evt) => {
+
+  
+    fetch(`https://restcountries.com/v3.1/region/${elSelect.value}`)
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      renderposts(res, elCards);
+    })
+  }
+)
+
+
 
   
   
